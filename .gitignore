@@ -1,0 +1,4 @@
+/backend/node_modules
+/backend/package-lock.json
+/ionic_front/node_modules
+/ionic_front/package-lock.json

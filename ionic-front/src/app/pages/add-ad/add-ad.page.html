@@ -1,0 +1,64 @@
+<ion-content padding>
+  <div class="bg-img">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home" color="white">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <form #form="ngForm" (ngSubmit)="ad(form)">
+      <ion-grid>
+        <ion-row class="primary" justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center style="padding: 30px">
+              <h1>add new post</h1>
+            </div>
+            <ion-item>
+              <ion-label position="stacked">title</ion-label>
+              <ion-input
+                name="title"
+                type="text"
+                placeholder="  title"
+                ngModel
+                required
+              >
+              </ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">description</ion-label>
+              <ion-input
+                name="description"
+                type="text"
+                placeholder="  description"
+                ngModel
+                required
+              >
+              </ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">category</ion-label>
+              <ion-input
+                name="category"
+                type="text"
+                placeholder="  category"
+                ngModel
+                required
+              >
+              </ion-input>
+            </ion-item>
+            <br />
+            <div class="signin-btns ion-align-items-center">
+              <ion-button
+                size="large"
+                type="submit"
+                [disabled]="form.invalid"
+                shape="round"
+                >add</ion-button
+              >
+            </div>
+          </ion-col>
+        </ion-row>
+        <br />
+      </ion-grid>
+    </form>
+  </div>
+</ion-content>

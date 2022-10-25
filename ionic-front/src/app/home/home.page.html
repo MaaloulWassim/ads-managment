@@ -1,0 +1,64 @@
+<ion-menu contentId="main-content">
+  <ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+      <ion-title>Home Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="background">
+    <div class="ion-padding">
+      <ion-buttons>
+        <ion-icon name="build" color="primary"></ion-icon>
+        <ion-button
+          color="primary"
+          expand="block"
+          size="large"
+          [routerLink]="['/my-ads',uid]"
+          >My Posts</ion-button
+        >
+      </ion-buttons>
+      <br />
+      <ion-buttons>
+        <ion-icon name="exit" color="primary"></ion-icon>
+        <ion-button
+          color="primary"
+          expand="block"
+          size="large"
+          routerLink="/login"
+          (click)="logout()"
+          >Log out
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>All users</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content
+    ><div class="bg-img">
+      <ion-card class="ion-padding ion-align-items-center">
+        <ion-item
+          class="ion-padding"
+          *ngFor="let user of usersList"
+          [routerLink]="['/user-ads', user.id]"
+        >
+          <ion-avatar>
+            <img src="../../../assets/images/avatar.png" />
+          </ion-avatar>
+          <div>
+            email :<ion-label class="ion-margin">{{ user.email }}</ion-label>
+            user Name:<ion-label class="ion-margin"
+              >{{ user.userName }}</ion-label
+            >
+          </div>
+        </ion-item></ion-card
+      >
+    </div>
+  </ion-content>
+</div>

@@ -1,0 +1,35 @@
+<ion-content>
+  <div class="bg-img">
+    <ion-card class="ion-no-margin">
+      <ion-img src="../../../assets/images/machinee.png"></ion-img>
+      <ion-card-header>
+        <ion-card-title> Welcome to ADS </ion-card-title>
+        <ion-card-subtitle class="ion-text-lowercase">
+          "gestion des annonces"
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div class="signin-btns">
+          <ion-button
+            size="large"
+            fill="solid"
+            shape="round"
+            class="loginbtn"
+            (click)="gotoLoginpage()"
+          >
+            Login
+          </ion-button>
+          <ion-button
+            size="large"
+            fill="outline"
+            shape="round"
+            color="light"
+            (click)="registerUser()"
+            >Sign Up</ion-button
+          >
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

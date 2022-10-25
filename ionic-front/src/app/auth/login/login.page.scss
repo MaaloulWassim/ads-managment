@@ -1,0 +1,43 @@
+ion-item {
+  --background: #rgba(155, 78, 222, 0.5);
+  --color: #fff;
+  --border-radius: 15px;
+}
+
+ion-button {
+  --background: #215ab7;
+}
+a {
+  color: #fff;
+}
+.bg-img {
+  padding: 1px;
+  height: 100%;
+  width: 100%;
+  //background-color: red;
+  background-image: url("../../../assets/images/wallpaper.jpg");
+  //background-repeat: repeat-y;
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+  margin-left: 20px;
+  font-size: 30px;
+}
+ion-toolbar {
+  --ion-background-color: transparent;
+  --opacity: 0;
+}
+ion-header {
+  position: absolute;
+}
+ion-card {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+.signin-btns {
+  margin-top: 35px;
+  text-align: center;
+  color: #f0f4fa;
+}

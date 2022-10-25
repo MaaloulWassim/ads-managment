@@ -1,0 +1,81 @@
+<ion-content padding>
+  <div class="bg-img">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/welcome" color="white">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <form #form="ngForm" (ngSubmit)="login(form)">
+      <ion-grid>
+        <ion-row class="primary" justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center style="padding: 30px">
+              <h1>Login</h1>
+            </div>
+
+            <!-- <ion-item>
+                <ion-input
+                  name="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  ngModel
+                  required
+                ></ion-input>
+              </ion-item> -->
+            <ion-item>
+              <ion-label position="stacked">Email</ion-label>
+              <ion-input
+                name="email"
+                type="email"
+                placeholder="  AAA@gmail.com"
+                ngModel
+                required
+              >
+                <ion-icon name="mail" slot="start" color="white"></ion-icon>
+              </ion-input>
+            </ion-item>
+            <!-- <ion-item>
+                <ion-input
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  ngModel
+                  required
+                ></ion-input>
+              </ion-item> -->
+            <br />
+            <ion-item>
+              <ion-label position="stacked">Password</ion-label>
+              <ion-input
+                name="password"
+                type="password"
+                placeholder="  Password min 6 characters"
+                ngModel
+                required
+              >
+                <ion-icon name="key" color="white" slot="start"></ion-icon>
+              </ion-input>
+            </ion-item>
+            <br />
+            <div class="signin-btns ion-align-items-center">
+              <ion-button
+                size="large"
+                type="submit"
+                [disabled]="form.invalid"
+                shape="round"
+                >Login</ion-button
+              >
+            </div>
+          </ion-col>
+        </ion-row>
+        <br />
+        <ion-row>
+          <div class="ion-paddig ion-align-items-center">
+            If you don't have an account, please
+            <a routerLink="/register"> register</a>
+          </div>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+</ion-content>

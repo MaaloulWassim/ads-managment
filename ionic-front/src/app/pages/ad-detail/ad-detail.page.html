@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>ad</ion-title>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bg-img" *ngIf="addetail">
+    <ion-card>
+      <ion-card-header>
+        <ion-text><h5>ad content</h5> </ion-text>
+      </ion-card-header>
+      <ion-item class="ion-padding">
+        <div>
+          title:
+          <ion-label class="ion-margin">{{addetail.title}}</ion-label>
+          description:
+          <ion-label class="ion-margin">{{addetail.description}}</ion-label>
+          category:
+          <ion-label class="ion-margin">{{addetail.category }}</ion-label>
+        </div>
+      </ion-item>
+    </ion-card>
+  </div>
+</ion-content>
