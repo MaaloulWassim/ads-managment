@@ -20,7 +20,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // this.router.navigateByUrl('welcome');
+      this.router.navigateByUrl('welcome');
     });
   }
 }
